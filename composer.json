@@ -1,0 +1,23 @@
+{
+    "name": "rrmontuan/yii2-materialadmin-asset",
+    "description": "Assets for using Material Admin Theme in Yii2 Framework",
+    "type": "yii2-extension",
+    "license": "BSD-3-Clause",
+	"keywords": ["yii2","extension","materialadmin","admin","theme","backend","asset","css"],
+    "authors": [
+        {
+            "name": "Ricardo Montuan",
+            "email": "ricardo.montuan@hotmail.com"
+        }
+    ],
+	"require": {
+        "yiisoft/yii2": "2.*",
+        "yiisoft/yii2-bootstrap": "2.*"
+    },
+    "require": {},
+	"autoload": {
+		"psr-4": {
+			"rrmontuan\\": ""
+		}
+	}
+}
