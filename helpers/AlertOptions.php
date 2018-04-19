@@ -1,5 +1,5 @@
 <?php
-namespace rmontuan\helpers;
+namespace rrmontuan\helpers;
 
 class AlertOptions
 {

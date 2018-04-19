@@ -66,14 +66,16 @@ class Alert extends Widget
 		$flashes = $session->getAllFlashes();
 
 		foreach ($flashes as $type => $data) {
-			$dados = (is_array($data)) ? $data : [$data];
-			foreach ($dados as $options) {
+			$dataArray = (is_array($data)) ? $data : [$data];
+			foreach ($dataArray as $item) {
 					
-				if(!($options instanceof AlertOptions))
-					throw new Exception('The second parameter used in the method "setFlash" must be an AlertOptions object or a list of AlertOptions objects');
+				if($item instanceof AlertOptions)
+					$options = $item->getArray();
+				else
+					$options = ['message' => $item];
 				
 				array_push($this->messages, [
-					'options' => $options->getArray(),
+					'options' => $options,
 					'type' => $type
 				]);
 			}
